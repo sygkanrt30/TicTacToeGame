@@ -1,5 +1,7 @@
-package progect.oop.tic_tac_toe;
+package progect.oop.tic_tac_toe.mode;
 
+
+import progect.oop.tic_tac_toe.MainApp;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -65,7 +67,7 @@ public class TicTacToeGame {
                 cy + offsetY * (dotsToWin - 1) < 0) {
             return false;
         }
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < dotsToWin; i++) {
             if (map[cx + i * offsetX][cy + i * offsetY] != symbol) {
                 return false;
             }

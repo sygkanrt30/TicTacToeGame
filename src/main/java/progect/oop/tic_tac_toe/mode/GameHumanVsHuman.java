@@ -1,4 +1,4 @@
-package progect.oop.tic_tac_toe;
+package progect.oop.tic_tac_toe.mode;
 
 public class GameHumanVsHuman extends TicTacToeGame {
 

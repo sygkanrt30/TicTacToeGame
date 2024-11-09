@@ -1,4 +1,4 @@
-package progect.oop.tic_tac_toe;
+package progect.oop.tic_tac_toe.mode;
 
 
 public class GameIoVsIo extends TicTacToeGame {
@@ -13,6 +13,13 @@ public class GameIoVsIo extends TicTacToeGame {
         while (true) {
             if (k % 2 == 0) {
                 ioMove(charX);
+                if (k != 0) {
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
                 System.out.println();
                 System.out.println((k + 1) + " ход:");
                 printMap();
@@ -22,6 +29,11 @@ public class GameIoVsIo extends TicTacToeGame {
                     break;
                 }
             } else {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
                 ioMove(charO);
                 System.out.println();
                 System.out.println((k + 1) + " ход:");

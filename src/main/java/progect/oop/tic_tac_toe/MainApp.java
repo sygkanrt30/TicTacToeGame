@@ -1,5 +1,9 @@
 package progect.oop.tic_tac_toe;
 
+import progect.oop.tic_tac_toe.mode.GameHumanVsHuman;
+import progect.oop.tic_tac_toe.mode.GameIoVsHuman;
+import progect.oop.tic_tac_toe.mode.GameIoVsIo;
+
 import java.util.Scanner;
 
 
@@ -10,7 +14,7 @@ public class MainApp {
         int checkedSize, checkedMode;
         String size, mode;
         do {
-            System.out.println("Выберите размер поля, для этого ведите длину одной стороны (длина стороны не может быть больше 9): ");
+            System.out.println("Выберите размер поля, для этого ведите длину одной стороны (длина стороны не может быть больше 9 и меньше 3): ");
             size = scanner.next();
         } while (!checkInputSize(size));
         System.out.println("""
@@ -42,7 +46,7 @@ public class MainApp {
 
     public static boolean checkParceIntError(String input) {
         try {
-            int checkInput = Integer.parseInt(input);
+            Integer.parseInt(input);
         } catch (NumberFormatException checkInput) {
             return false;
         }
@@ -53,7 +57,7 @@ public class MainApp {
         int size;
         if (checkParceIntError(inputSize)) {
             size = Integer.parseInt(inputSize);
-            return size > 0 && size < 10;
+            return size > 2 && size < 10;
         }
         return false;
     }

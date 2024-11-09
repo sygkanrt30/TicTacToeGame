@@ -1,4 +1,4 @@
-package progect.oop.tic_tac_toe;
+package progect.oop.tic_tac_toe.mode;
 
 public class GameIoVsHuman extends TicTacToeGame {
 
@@ -24,7 +24,7 @@ public class GameIoVsHuman extends TicTacToeGame {
                 System.out.println("Ничья!");
                 break;
             }
-            k ++;
+            k++;
             ioMove();
             System.out.println();
             System.out.println(k + " ход:");
