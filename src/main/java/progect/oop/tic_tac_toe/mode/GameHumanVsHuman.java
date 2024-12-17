@@ -19,18 +19,18 @@ public class GameHumanVsHuman extends TicTacToeGame {
                 if (checkWin(charX, dotsToWin)) {
                     System.out.println("Победил первый игрок!");
                     System.out.println("Сделано " + (k + 1) + " ходов.");
-                    break;
+                    return;
                 } else {
                     if (checkWin(charO, dotsToWin)) {
                         System.out.println("Победил второй игрок!");
                         System.out.println("Сделано " + (k + 1) + " ходов.");
-                        break;
+                        return;
                     }
                 }
             }
             if (isFull()) {
                 System.out.println("Ничья!");
-                break;
+                return;
             }
             k++;
         }
@@ -38,14 +38,13 @@ public class GameHumanVsHuman extends TicTacToeGame {
 
     public void humanMove(int k) {
         String x, y;
-        int checkedX, checkedY;
         do {
             System.out.println("Введите координаты X Y");
             x = scanner.next();
             y = scanner.next();
         } while (isCellValidHuman(x, y));
-        checkedX = Integer.parseInt(x) - 1;
-        checkedY = Integer.parseInt(y) - 1;
+        int checkedX = Integer.parseInt(x) - 1;
+        int checkedY = Integer.parseInt(y) - 1;
         if (k % 2 == 0) {
             map[checkedX][checkedY] = charX;
         } else {

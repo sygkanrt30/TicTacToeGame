@@ -29,18 +29,18 @@ public class MainApp {
         checkedSize = Integer.parseInt(size);
         checkedMode = Integer.parseInt(mode);
         switch (checkedMode) {
-            case 1:
+            case 1 -> {
                 GameHumanVsHuman gameHumanVsHuman = new GameHumanVsHuman(checkedSize);
                 gameHumanVsHuman.game();
-                break;
-            case 2:
+            }
+            case 2 -> {
                 GameIoVsHuman gameIoVsHuman = new GameIoVsHuman(checkedSize);
                 gameIoVsHuman.game();
-                break;
-            case 3:
+            }
+            case 3 -> {
                 GameIoVsIo gameIoVsIo = new GameIoVsIo(checkedSize);
                 gameIoVsIo.game();
-                break;
+            }
         }
     }
 
@@ -54,18 +54,16 @@ public class MainApp {
     }
 
     public static boolean checkInputSize(String inputSize) {
-        int size;
         if (checkParceIntError(inputSize)) {
-            size = Integer.parseInt(inputSize);
+            int size = Integer.parseInt(inputSize);
             return size > 2 && size < 10;
         }
         return false;
     }
 
     public static boolean checkInputMode(String inputMode) {
-        int size;
         if (checkParceIntError(inputMode)) {
-            size = Integer.parseInt(inputMode);
+            int size = Integer.parseInt(inputMode);
             return size > 0 && size < 4;
         }
         return false;

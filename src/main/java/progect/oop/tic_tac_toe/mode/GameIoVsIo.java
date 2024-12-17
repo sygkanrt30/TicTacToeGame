@@ -26,7 +26,7 @@ public class GameIoVsIo extends TicTacToeGame {
                 if (checkWin(charX, dotsToWin)) {
                     System.out.println("Победил бот1!");
                     System.out.println("Сделано " + (k + 1) + " ходов.");
-                    break;
+                    return;
                 }
             } else {
                 try {
@@ -41,12 +41,12 @@ public class GameIoVsIo extends TicTacToeGame {
                 if (checkWin(charO, dotsToWin)) {
                     System.out.println("Победил бот2!");
                     System.out.println("Сделано " + (k + 1) + " ходов.");
-                    break;
+                    return;
                 }
             }
             if (isFull()) {
                 System.out.println("Ничья!");
-                break;
+                return;
             }
             k++;
         }

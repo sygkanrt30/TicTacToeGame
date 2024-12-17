@@ -18,11 +18,11 @@ public class GameIoVsHuman extends TicTacToeGame {
             if (checkWin(charX, dotsToWin)) {
                 System.out.println("Победил игрок!");
                 System.out.println("Сделано " + k + " ходов.");
-                break;
+                return;
             }
             if (isFull()) {
                 System.out.println("Ничья!");
-                break;
+                return;
             }
             k++;
             ioMove();
@@ -32,11 +32,11 @@ public class GameIoVsHuman extends TicTacToeGame {
             if (checkWin(charO, dotsToWin)) {
                 System.out.println("Победил бот!");
                 System.out.println("Сделано " + k + " ходов.");
-                break;
+                return;
             }
             if (isFull()) {
                 System.out.println("Ничья!");
-                break;
+                return;
             }
             k++;
         }

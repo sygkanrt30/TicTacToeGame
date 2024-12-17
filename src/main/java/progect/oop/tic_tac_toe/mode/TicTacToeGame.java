@@ -111,14 +111,13 @@ public class TicTacToeGame {
 
     public void humanMove() {
         String x, y;
-        int checkedX, checkedY;
         do {
             System.out.println("Введите координаты X Y");
             x = scanner.next();
             y = scanner.next();
         } while (isCellValidHuman(x, y));
-        checkedX = Integer.parseInt(x) - 1;
-        checkedY = Integer.parseInt(y) - 1;
+        int checkedX = Integer.parseInt(x) - 1;
+        int checkedY = Integer.parseInt(y) - 1;
         map[checkedX][checkedY] = charX;
     }
 
