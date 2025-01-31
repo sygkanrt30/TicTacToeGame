@@ -26,10 +26,6 @@ public class TicTacToeGame {
         this.dotsToWin = 3;
     }
 
-    public int getDotsToWin() {
-        return dotsToWin;
-    }
-
     public void init() {
         for (char[] chars : map) {
             Arrays.fill(chars, charEmpty);
